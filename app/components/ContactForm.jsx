@@ -28,7 +28,6 @@ export default function ContactForm() {
     });
     const { msg } = await res.json();
     setError(msg);
-    console.log(error);
   };
 
   return (
@@ -69,7 +68,7 @@ export default function ContactForm() {
       </form>
 
       <div className={styles.errorMessage}>
-        <div>Error Message</div>
+        {error && error.map((e) => <div>{e}</div>)}
       </div>
     </>
   );

@@ -1,0 +1,22 @@
+.body {
+  background-image: url("../images/stars.jpg");
+  background-color: #000000;
+  object-fit: contain;
+  background-size: cover; /* Cover the entire container */
+  z-index: -1; /* Ensure the background is behind other content */
+}
+.contentBox {
+  display: flex; /* Use flexbox */
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex: 1; /* Grow to fill remaining space */
+  background-color: white;
+  border: 1px solid #000000; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  padding: 20px; /* Add padding */
+  margin-top: 35px;
+  width: 90%;
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}

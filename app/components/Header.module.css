@@ -1,0 +1,46 @@
+.header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-color: #ffffff;
+  border-radius: 10px;
+  width: 95%;
+  margin: 0 auto; /* Center header horizontally */
+  position: relative; /* Add position relative for ribbon positioning */
+}
+
+.ribbon {
+  position: absolute;
+  border-radius: 10px;
+  top: -20px; /* Position relative to header */
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  border: 1px solid #ccc; /* Add border */
+  padding: 5px; /* Add padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navLink {
+  margin-right: 20px; /* Adjust as needed */
+  color: #333; /* Change text color */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 12px; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  transition: all 0.3s ease; /* Add transition for smoother hover effect */
+}
+
+.navLink:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+  border-color: #999; /* Change border color on hover */
+}
+
+.logo {
+  color: #333;
+  text-decoration: none;
+  margin-right: 20px; /* Adjust as needed */
+}

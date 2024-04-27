@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 2px;
+  background-color: #ffffff; /* Background color */
+  color: #000000; /* Text color */
+  padding: 20px; /* Padding */
+  text-align: center; /* Center align text */
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  border-radius: 5px;
+}

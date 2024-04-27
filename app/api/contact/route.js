@@ -7,7 +7,8 @@ export async function POST(req) {
   const { fullname, email, message } = await req.json();
 
   try {
-    await connectDB();
+    const newURI = process.env.MONGODB_URI_1;
+    await connectDB(newURI);
     await Contact.create({ fullname, email, message });
 
     return NextResponse.json({

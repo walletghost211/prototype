@@ -20,6 +20,9 @@ const Header = () => {
           <Link href="/about" className={styles.navLink}>
             About
           </Link>
+          <Link href="/admin" className={styles.navLink}>
+            Admin
+          </Link>
           <Link href="/contact-us" className={styles.navLink}>
             Contact us
           </Link>

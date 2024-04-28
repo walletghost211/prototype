@@ -13,7 +13,7 @@ export default function AnnouncementForm() {
     console.log("Title: ", title);
     console.log("Content: ", content);
 
-    const res = await fetch("./api/announcement", {
+    const res = await fetch("../api/announcement", {
       // Adjust the API endpoint to '/api/announcement'
       method: "POST",
       headers: {

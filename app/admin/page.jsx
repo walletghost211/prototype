@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import styles from "../page.module.css";
-import AnnouncementForm from "../components/AnnouncementForm";
+import styles from "./admin.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +10,14 @@ export default function Home() {
       <body className={styles.body}></body>
       <div className={styles.contentBox}>
         <h1>Admin Dashboard</h1>
-        <AnnouncementForm />
+        <div>
+          <Link
+            href="../admin/announcement"
+            className={styles.announcementButton}
+          >
+            Create Announcement
+          </Link>
+        </div>
       </div>
       <Footer />
     </>

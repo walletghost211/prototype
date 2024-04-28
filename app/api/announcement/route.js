@@ -7,7 +7,7 @@ export async function POST(req) {
   const { title, content } = await req.json(); // Adjust variable names to match the announcement fields
 
   try {
-    const newURI = process.env.MONGODB_URI_2;
+    const newURI = process.env.MONGODB_URI_1;
     await connectDB(newURI);
     await Announcement.create({ title, content }); // Create a new announcement using the Announcement model
 
@@ -26,5 +26,20 @@ export async function POST(req) {
     } else {
       return NextResponse.json({ msg: ["Unable to create announcement."] });
     }
+  }
+}
+
+export async function GET() {
+  try {
+    const newURI = process.env.MONGODB_URI_1;
+    await connectDB(newURI);
+    const announcements = await Announcement.find({}); // Fetch all announcements from the database
+
+    return NextResponse.json({
+      announcements,
+    });
+  } catch (error) {
+    console.error("Error fetching announcements:", error);
+    return NextResponse.json({ msg: ["Unable to fetch announcements."] });
   }
 }

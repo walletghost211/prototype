@@ -17,13 +17,20 @@
   margin-right: auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.buttonPos {
+  justify-content: center; /* Align buttons horizontally in the center */
+  margin-top: 25px;
+}
+
 .announcementButton {
   color: white;
   background-color: #007bff; /* Blue color, you can change it to fit your design */
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  display: inline-block;
+  margin: 0 5px; /* Add margin between buttons */
+  flex: 1; /* Make all buttons equal width */
+  text-align: center; /* Center text */
   transition: background-color 0.3s ease;
 }
 

@@ -10,6 +10,7 @@ export default function Home() {
       <body className={styles.body}></body>
       <div className={styles.contentBox}>
         <h1>Announcement</h1>
+        <hr />
         <AnnouncementForm />
       </div>
       <Footer />

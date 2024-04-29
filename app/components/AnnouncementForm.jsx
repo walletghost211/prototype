@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "./ContactForm.module.css";
+import styles from "./AnnouncementForm.module.css";
 
 export default function AnnouncementForm() {
   const [title, setTitle] = useState("");

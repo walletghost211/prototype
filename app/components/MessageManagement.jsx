@@ -28,7 +28,7 @@ export default function MessageManagement() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`/api/messagemanagement?id=${id}`, {
+      const res = await fetch(`/api/contact?id=${id}`, {
         method: "DELETE",
       });
       if (res.ok) {

@@ -28,3 +28,25 @@ export async function POST(req) {
     }
   }
 }
+export async function GET() {
+  try {
+    const newURI = process.env.MONGODB_URI_1;
+    await connectDB(newURI);
+    const messages = await Contact.find({}); // Fetch all announcements from the database
+
+    return NextResponse.json({
+      messages,
+    });
+  } catch (error) {
+    console.error("Error fetching messages:", error);
+    return NextResponse.json({ msg: ["Unable to fetch messages."] });
+  }
+}
+
+export async function DELETE(request) {
+  const id = request.nextUrl.searchParams.get("id");
+  const newURI = process.env.MONGODB_URI_1;
+  await connectDB(newURI);
+  await Contact.findByIdAndDelete(id);
+  return NextResponse.json({ msg: ["Content Deleted"] }), { status: 200 };
+}

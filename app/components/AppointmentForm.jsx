@@ -1,11 +1,13 @@
 // AppointmentForm.jsx
 "use client";
+// AppointmentForm.jsx
 import { useState } from "react";
 import styles from "./AppointmentForm.module.css";
 
 export default function AppointmentForm() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState([]);
 
   const handleSubmit = async (e) => {
@@ -13,6 +15,7 @@ export default function AppointmentForm() {
 
     console.log("Full name: ", fullname);
     console.log("Email: ", email);
+    console.log("Phone number: ", phoneNumber);
 
     const res = await fetch("../api/appointment", {
       method: "POST",
@@ -22,6 +25,7 @@ export default function AppointmentForm() {
       body: JSON.stringify({
         fullname,
         email,
+        phoneNumber, // Include phoneNumber in the request body
       }),
     });
     const { msg } = await res.json();
@@ -49,6 +53,16 @@ export default function AppointmentForm() {
             type="text"
             id="email"
             placeholder="Enter email"
+          />
+        </div>
+        <div>
+          <label htmlFor="phoneNumber">Phone number: </label>
+          <input
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            value={phoneNumber}
+            type="text"
+            id="phoneNumber"
+            placeholder="Enter phone number"
           />
         </div>
         <div>

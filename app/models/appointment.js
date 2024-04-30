@@ -1,3 +1,4 @@
+// appointmentModel.js
 import mongoose, { Schema } from "mongoose";
 
 const appointmentSchema = new Schema({
@@ -12,13 +13,17 @@ const appointmentSchema = new Schema({
     lowercase: true,
     match: [/^\S+@\S+\.\S+$/, "Please enter a valid email address."],
   },
+  phoneNumber: {
+    type: String, // Define phoneNumber field
+    required: false,
+  },
   date: {
     type: Date,
-    required: false, 
+    required: false,
   },
   time: {
     type: String,
-    required: false, 
+    required: false,
   },
   status: {
     type: String,

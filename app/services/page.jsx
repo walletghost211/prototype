@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "./services.module.css";
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -9,6 +10,9 @@ export default function Home() {
       <div className={styles.contentBox}>
         <h1>Services</h1>
         <hr />
+        <Link href="../services/Indigency" className={styles.announcementButton}><div>Request Indigency</div></Link>
+        <Link href="../services/Clearance" className={styles.announcementButton}><div>Request Clearance</div></Link>
+        <Link href="../services/Appointment" className={styles.announcementButton}><div>Request Appointment</div></Link>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           quod quibusdam modi molestias ab iure voluptatum explicabo eum

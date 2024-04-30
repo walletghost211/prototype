@@ -10,6 +10,7 @@ export default function Home() {
       <div className={styles.contentBox}>
         <h1>Clearance</h1>
         <hr />
+        <h2>Fill in the form below</h2>
         <BarangayClearanceForm/>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam

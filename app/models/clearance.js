@@ -1,4 +1,3 @@
-// BarangayClearance.js
 import mongoose from 'mongoose';
 
 const BarangayClearanceSchema = new mongoose.Schema({
@@ -17,6 +16,11 @@ const BarangayClearanceSchema = new mongoose.Schema({
   address: {
     type: String,
     required: true,
+  },
+  status: {
+    type: String,
+    enum: ["pending", "approved", "rejected"],
+    default: "pending",
   },
   createdAt: {
     type: Date,

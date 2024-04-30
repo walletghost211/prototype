@@ -14,8 +14,8 @@ const appointmentSchema = new Schema({
     match: [/^\S+@\S+\.\S+$/, "Please enter a valid email address."],
   },
   phoneNumber: {
-    type: String, // Define phoneNumber field
-    required: false,
+    type: String,
+    required: [true, "Phone number is required."],
   },
   date: {
     type: Date,

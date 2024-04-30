@@ -1,6 +1,4 @@
-// AppointmentForm.jsx
 "use client";
-// AppointmentForm.jsx
 import { useState } from "react";
 import styles from "./AppointmentForm.module.css";
 
@@ -25,7 +23,7 @@ export default function AppointmentForm() {
       body: JSON.stringify({
         fullname,
         email,
-        phoneNumber, // Include phoneNumber in the request body
+        phoneNumber,
       }),
     });
     const { msg } = await res.json();

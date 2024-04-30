@@ -1,16 +1,16 @@
 // route.js
 import connectDB from "@/app/lib/mongodb";
-import Appointment from "@/app/models/Appointment";
+import Appointment from "@/app/models/appointment";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  const { fullname, email } = await req.json(); 
+  const { fullname, email, phoneNumber } = await req.json(); 
 
   try {
     const newURI = process.env.MONGODB_URI_1;
     await connectDB(newURI);
-    await Appointment.create({ fullname, email });
+    await Appointment.create({ fullname, email, phoneNumber });
 
     return NextResponse.json({
       msg: ["Appointment request sent successfully"],

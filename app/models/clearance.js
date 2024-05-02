@@ -1,7 +1,15 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const BarangayClearanceSchema = new mongoose.Schema({
-  fullname: {
+  firstName: {
+    type: String,
+    required: true,
+  },
+  middleName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
     type: String,
     required: true,
   },
@@ -17,6 +25,13 @@ const BarangayClearanceSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  purposeOfTransaction: {
+    type: String,
+    required: true,
+  },
+  referencePerson: {
+    type: String,
+  },
   status: {
     type: String,
     enum: ["pending", "approved", "rejected"],
@@ -28,6 +43,9 @@ const BarangayClearanceSchema = new mongoose.Schema({
   },
 });
 
-const BarangayClearance = mongoose.model('BarangayClearance', BarangayClearanceSchema);
+const BarangayClearance = mongoose.model(
+  "BarangayClearance",
+  BarangayClearanceSchema
+);
 
 export default BarangayClearance;
